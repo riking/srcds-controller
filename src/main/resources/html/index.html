@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+
+    This file is part of the Source Dedicated Server Controller project.
+
+    This program is free software; you can redistribute it and/or modify it
+    under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+    See the GNU General Public License for more details.
+    
+    You should have received a copy of the GNU General Public License
+    along with this program; if not, see <http://www.gnu.org/licenses>.
+    
+    Additional permission under GNU GPL version 3 section 7
+    
+    If you modify this Program, or any covered work, by linking or
+    combining it with srcds-controller (or a modified version of that library),
+    containing parts covered by the terms of GNU General Public License,
+    the licensors of this Program grant you additional permission to convey
+    the resulting work. {Corresponding Source for a non-source form of such a
+    combination shall include the source code for the parts of srcds-controller
+    used as well as that of the covered work.}
+
+    For more information, please consult:
+       <http://www.earthquake-clan.de/srcds/>
+       <http://code.google.com/p/srcds-controller/>
+
+--> 
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Source Dedicated Server Controller @ ${hostname}</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+		<link rel="icon" href="${img:favicon.ico}" type="image/x-icon"></link>
+		<link rel="stylesheet" media="screen, print, projection, tv" href="${css:screen.css}"></link>
+		<link rel="stylesheet" media="aural, braille, embossed, handheld, tty" href="${css:textmode.css}"></link>
+		<script type="text/javascript">
+		<!--
+		function CheckWindowed() {
+			var query = document.location.search || document.location.hash;
+			var windowed = false;
+			if (query) 
+			{
+			 	var params = query.substring(1).split("&");
+			 	for(var i = 0; i < params.length; i++) 
+				{
+			  		var param = params[i];
+			  		var eqIndex = param.indexOf("=");
+			  		var pname = param.substring(0, eqIndex);
+			  		var pval  = param.substring(eqIndex + 1);
+			  		if (pname == 'windowed') 
+					{
+			   			windowed = true;
+			  		}
+			 	}
+			}
+			if (windowed == true) {
+				document.getElementById('popupshow').style.display = 'none';		
+			}		
+		}
+
+        function PopupWindow() {
+			myWindow = window.open(".?windowed=true","${hostname}","status=0,menubar=0,resizable=0,width=${popup-width},height=${popup-height}");
+		}
+		// -->
+        </script>        
+	</head>
+	<body onload="javascript: CheckWindowed()">
+		<div id="header">Source Dedicated Server Controller @ ${hostname}</div>
+		<br/>
+		<img src="${img:header_index.png}" />
+		<br/>
+		<br/>
+		<ul>
+		<li><a href="start"><img width="48" height="24" src="${img:icon_start.png}" />Start the SRCDS instance</a></li>
+		<li><a href="stop"><img width="48" height="24" src="${img:icon_stop.png}" />Stop the SRCDS instance</a></li>
+		<li><a href="restart"><img width="48" height="24" src="${img:icon_restart.png}" />Restart the SRCDS instance</a></li>
+		<li><a href="status"><img width="48" height="24" src="${img:icon_status.png}" />Show information on the current state of the SRCDS instance</a></li> 
+		<li><a href="processOutput"><img width="48" height="24" src="${img:icon_monitor.png}" />Monitor live server output</a></li> 
+		<li><a href="editConfig"><img width="48" height="24" src="${img:icon_editconfig.png}" />Edit the controller configuration </a></li>
+		<li><a href="editConfigFiles"><img width="48" height="24" src="${img:icon_editconfigfiles.png}" />Edit the game-specific configuration files</a></li>
+		<li><img width="48" height="24" src="${img:icon_rcon.png}" />Execute a rcon command (e.g. rcon?command=status)
+			<form class="rcon" action="rcon" method="get">
+				<input name="command" type="text" size="40" class="rcon" />
+				<input type="submit" value="Send" />
+			</form>
+		</li>
+		<li><a href="shutdown"><img width="48" height="24" src="${img:icon_shutdown.png}" />Shutdown the controller</a></li>
+		</ul>
+		<p class="footer">
+			<a name="popupshow" id="popupshow" href="#" onclick="javascript:PopupWindow()">Open as a popup | </a>
+			<a href="http://www.earthquake-clan.de/srcds/" target="_blank">Visit Homepage</a> | srcds-controller v${version}
+		</p>
+	</body>
+</html>

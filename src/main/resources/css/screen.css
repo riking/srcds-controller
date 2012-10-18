@@ -1,0 +1,140 @@
+/**
+ * This file is part of the Source Dedicated Server Controller project.
+ *
+ * This program is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * See the GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, see <http://www.gnu.org/licenses>.
+ * 
+ * Additional permission under GNU GPL version 3 section 7
+ * 
+ * If you modify this Program, or any covered work, by linking or
+ * combining it with srcds-controller (or a modified version of that library),
+ * containing parts covered by the terms of GNU General Public License,
+ * the licensors of this Program grant you additional permission to convey
+ * the resulting work. {Corresponding Source for a non-source form of such a
+ * combination shall include the source code for the parts of srcds-controller
+ * used as well as that of the covered work.}
+ *
+ * For more information, please consult:
+ *    <http://www.earthquake-clan.de/srcds/>
+ *    <http://code.google.com/p/srcds-controller/>
+ */
+body {
+    font-family: Verdana, Arial;
+    font-size: 12px;
+    background-color: #FFFFFF;
+    background-image: url(${img:background.png});
+    background-repeat: repeat-x;
+    background-position: top;
+    margin: 0px;
+}
+
+#header {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #50a64a;
+    text-align: center;
+    width: 100%;
+    padding: 3px;
+}
+
+li {
+    margin: 10px;
+    list-style-type: none;
+}
+
+img {
+    border: 0px;
+    vertical-align: middle;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #50A64A;
+}
+
+p.footer {
+	color: #A9BFA7;
+    margin-left: 98px;
+	margin-top: 20px;
+	font-size: x-small;
+}
+
+p.footer.a {
+	color: #50A64A;
+}
+
+tr.tableHeaders {
+	color: #FFFFFF;
+	background-color: #5cb553;	
+}
+
+
+td.tableData {
+	color: #000000;
+	background-color: #e6f3e5;	
+}
+
+div.response, a.response, h2.response, table.response, p.response, form input.response, form span.response, form textarea.response, #rconsubmit, .content {
+    margin-left: 98px;
+}
+
+input, select {
+	border: 1px solid #000;
+  	color: #000; 
+	background-color: #e6f3e5;
+	border: 1px solid; 
+	border-color: #5cb553 #5cb553 #5cb553 #5cb553; 
+}
+
+input.rcon {
+    margin-left: 49px;
+	margin-right: 5px;
+}
+
+form.rcon {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+input[type=submit], input[type=reset], input[type=button] {
+	border: 1px solid #000;
+  	color:#000; 
+	background-color: #e6f3e5;	
+	border: 1px solid; 
+	border-color: #5cb553 #5cb553 #5cb553 #5cb553; 
+}
+
+textarea {
+	width: 600px;
+	height: 400px;
+	padding: 5px;
+  	color: #000; 
+	background-color: #e6f3e5;	
+	border: 1px solid; 
+	border-color: #5cb553 #5cb553 #5cb553 #5cb553; 
+}
+
+.fileNotExistent {
+	color: red;
+	font-weight: bold;
+	background-color: lightyellow;
+	border: 1px solid orange;
+	padding: 2px;
+	display: inline;
+}

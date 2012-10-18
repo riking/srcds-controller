@@ -1,0 +1,18 @@
+<project name="${project.name}">
+  <skin>
+    <groupId>org.apache.maven.skins</groupId>
+    <artifactId>maven-default-skin</artifactId>
+  </skin>
+  <bannerLeft>
+    <name>${project.name}</name>
+    <src>images/banner.png</src>
+    <href>http://www.earthquake-clan.de/srcds/</href>
+  </bannerLeft>
+  <body>
+    <menu ref="reports"/>
+    <menu name="Links">
+      <item name="Project Homepage" href="http://www.earthquake-clan.de/srcds/"/>      
+      <item name="Google Code Project" href="http://code.google.com/p/srcds-controller/"/>      
+    </menu>
+  </body>
+</project>
